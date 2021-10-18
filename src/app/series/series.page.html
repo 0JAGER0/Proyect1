@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>series</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Me encuentro en serie</h1>
+  <ion-item *ngFor = "let serie of ser" [routerLink] = "['/series/',serie.id]">
+    <ion-avatar><img src="{{serie.imgURL}}" alt=""></ion-avatar>
+    <ion-label>
+      {{serie.nombre}}
+    </ion-label>
+
+  </ion-item>
+  <ion-button [routerLink] = "['/home']">Volver</ion-button>
+</ion-content>

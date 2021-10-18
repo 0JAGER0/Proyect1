@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>detalle-series</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <h1>Me encuentro en detalle serie</h1>
+  <ion-label>nombre : {{ser.nombre}}</ion-label>
+  <hr>
+  <ion-label>comentario : {{ser.comentario}}</ion-label>
+  <hr>
+  <ion-label>nota : {{ser.nota}}</ion-label>
+  <hr>
+  <ion-label>resumen : {{ser.resumen}}</ion-label>
+  <hr>
+  <img src={{ser.imgURL}} alt="">
+  <hr>
+  <ion-button [routerLink] = "['/series']">Volver</ion-button>
+</ion-content>

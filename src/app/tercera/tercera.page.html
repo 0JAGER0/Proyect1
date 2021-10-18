@@ -1,0 +1,28 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>tercera</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+
+  <ion-list>
+    <ion-item *ngFor="let m of character">
+      <ion-avatar slot="start">
+        <ion-img [src]="m.imgURL"></ion-img>
+      </ion-avatar>
+      <ion-label>
+        {{m.nombre}}
+        <ion-item *ngFor='let cc of m.comentarios'>
+          {{cc}}
+        </ion-item>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-button [routerLink] ="['/home']">
+  Volver
+</ion-button>
