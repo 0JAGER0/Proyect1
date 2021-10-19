@@ -12,6 +12,51 @@
       {{serie.nombre}}
     </ion-label>
 
+
+
   </ion-item>
+  <h2> CRUD</h2>
+  <ion-item>
+    <ion-label position="fixed">titulo</ion-label>
+    <!--<ion-input [(ngModel)]="newItem.title"></ion-input>-->
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">valor</ion-label>
+    <!--<ion-input [(ngModel)]="newItem.value"></ion-input>-->
+  </ion-item>
+
+  <ion-button expand="full" (click)="addItem()">AGREGAR</ion-button>
+
+  <ion-list #mylist>
+
+    <ion-list-header>
+      <ion-label>Mis items</ion-label>
+    </ion-list-header>
+    
+    <ion-item-sliding *ngFor="let item of items">
+
+      <ion-item>
+        <ion-label text-wrap>
+          <h3>{{ item.title }}</h3>
+          <ion-text color="secondary">
+            <p>{{ item.value }}</p>
+          </ion-text>
+          <p>{{ item.modified | date:'short'}}</p>
+        </ion-label>
+      </ion-item>
+
+
+
+
+
+      <ion-item-options side="end">
+        <ion-item-option color="secondary" (click)="updateItem(item)">Actualizar</ion-item-option>
+        <ion-item-option color="danger" (click)="deleteItem(item)">Borrar</ion-item-option>
+      </ion-item-options>
+    </ion-item-sliding>
+
+  </ion-list>
+
   <ion-button [routerLink] = "['/home']">Volver</ion-button>
 </ion-content>
