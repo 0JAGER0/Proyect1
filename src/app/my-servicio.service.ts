@@ -1,6 +1,5 @@
 import { getLocaleFirstDayOfWeek } from '@angular/common';
 import { Injectable } from '@angular/core';
-
 import { Storage } from '@ionic/storage';
 
 @Injectable({
@@ -22,7 +21,7 @@ export class MyServicioService {
     await this.storage.set(key,valor);
   }
 
-  async agregar(valor:string)
+  async agregar(valor:any)
   {
     let id = await this.storage.length() + 1;
     await this.storage.set(id.toString(),valor);
