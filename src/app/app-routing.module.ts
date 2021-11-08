@@ -33,7 +33,16 @@ const routes: Routes = [
         path: ':idSerie',
         loadChildren: () => import('./series/detalle-series/detalle-series.module').then(m => m.DetalleSeriesPageModule)
 
+      },
+      {
+        path :'test1',
+        loadChildren: () =>import('./series/test1/test1-routing.module').then(m => m.Test1PageRoutingModule)
 
+
+      },
+      {
+        path :'test2',
+        loadChildren: () =>import('./series/test2/test2-routing.module').then(m => m.Test2PageRoutingModule)
 
       }
     ]
